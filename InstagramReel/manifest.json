@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Instagram Reels Downloader",
+  "version": "1.0",
+  "description": "One-click Instagram Reels downloader",
+  "permissions": ["activeTab", "downloads"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
